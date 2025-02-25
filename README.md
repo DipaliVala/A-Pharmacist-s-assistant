@@ -83,10 +83,4 @@ for rec in recommendations:
 
 - **Text not extracted:** Check the image quality and Tesseract installation.
 - **Incorrect recommendations:** Expand the `MEDICINE_DB` in the recommendation engine.
-
-## 🚀 Next Steps
-
-- Enhance the NLP models for better text understanding.
-- Integrate with real-time medicine databases via API.
-
 ---
