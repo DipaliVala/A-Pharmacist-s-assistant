@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Suggestion Assistant</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #74EBD5 0%, #9FACE6 100%);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .chat-container {
+            width: 100%;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .chat-header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .chat-box {
+            height: 500px;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+        .message {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .user-message {
+            background: #DCF8C6;
+            text-align: right;
+        }
+        .bot-message {
+            background: #E0E0E0;
+            text-align: left;
+        }
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            background: #fff;
+        }
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .chat-input button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #4CAF50;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .chat-input button:hover {
+            background: #45a049;
+        }
+        .feature-buttons {
+            text-align: center;
+            padding: 20px;
+        }
+        .feature-buttons button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        .feature-buttons button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <i class="fas fa-pills"></i> Medicine Suggestion Assistant
+        </div>
+        <div id="chatbox" class="chat-box"></div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Describe your symptoms...">
+            <button onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i> Send
+            </button>
+        </div>
+        <div class="feature-buttons">
+            <button onclick="showCommonSymptoms()"><i class="fas fa-notes-medical"></i> View Common Symptoms</button>
+            <button onclick="showEmergencyContacts()"><i class="fas fa-phone-alt"></i> Get Emergency Help</button>
+        </div>
+    </div>
+
+    <!-- Include jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        const chatbox = document.getElementById("chatbox");
+        const userInput = document.getElementById("userInput");
+
+        function addMessage(sender, message) {
+            const messageElement = document.createElement("div");
+            messageElement.classList.add("message", `${sender}-message`);
+            messageElement.innerHTML = `<strong>${sender}</strong>: ${message}`;
+            chatbox.appendChild(messageElement);
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        async function sendMessage() {
+            const message = userInput.value.trim();
+            if (!message) return;
+
+            addMessage("User", message);
+            userInput.value = "";
+
+            const response = await fetch("/chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message }),
+            });
+
+            const data = await response.json();
+            addMessage("Assistant", data.response);
+        }
+
+        function showCommonSymptoms() {
+            addMessage("Assistant", "Here are some common symptoms: fever, headache, dizziness, cold, cough.");
+        }
+
+        function showEmergencyContacts() {
+            addMessage("Assistant", "Need help? Contact KD Hospital 📞 9179 6677 000 🌐 kdhospital.co.in 📍 Vaishnodevi Circle, SG Highway, Ahmedabad - 382421");
+        }
+
+        userInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") sendMessage();
+        });
+    </script>
+</body>
+</html>

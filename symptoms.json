@@ -1,0 +1,69 @@
+{
+    "symptoms": {
+      "fever": [
+        {"name": "Paracetamol", "dosage": "500mg every 6 hours", "suggestion": "Take with water. Avoid alcohol."},
+        {"name": "Ibuprofen", "dosage": "400mg every 8 hours", "suggestion": "Take with food to avoid stomach upset."}
+      ],
+      "headache": [
+        {"name": "Aspirin", "dosage": "325mg every 4-6 hours", "suggestion": "Do not give to children under 12."},
+        {"name": "Acetaminophen", "dosage": "500mg every 6 hours", "suggestion": "Avoid excessive use to prevent liver damage."}
+      ],
+      "dizziness": [
+        {"name": "Meclizine", "dosage": "25mg once daily", "suggestion": "Avoid driving as it may cause drowsiness."},
+        {"name": "Betahistine", "dosage": "8mg three times daily", "suggestion": "Take after meals to reduce stomach discomfort."}
+      ],
+      "cold_flu": [
+        {"name": "Cetirizine", "dosage": "10mg once daily", "suggestion": "Take at bedtime to avoid drowsiness."},
+        {"name": "Dextromethorphan", "dosage": "10-20mg every 4 hours", "suggestion": "Do not exceed the recommended dose."}
+      ],
+      "cough": [
+        {"name": "Dextromethorphan", "dosage": "15mg every 6-8 hours", "suggestion": "Avoid driving as it may cause drowsiness."},
+        {"name": "Cough Syrup", "dosage": "10ml every 4-6 hours", "suggestion": "Shake well before use."}
+      ],
+      "allergy": [
+        {"name": "Cetirizine", "dosage": "10mg once daily", "suggestion": "Take at bedtime to avoid drowsiness."},
+        {"name": "Loratadine", "dosage": "10mg once daily", "suggestion": "Can be taken with or without food."}
+      ],
+      "stomach_pain": [
+        {"name": "Omeprazole", "dosage": "20mg once daily", "suggestion": "Take before meals."},
+        {"name": "Ranitidine", "dosage": "150mg twice daily", "suggestion": "Avoid spicy foods while taking this medication."}
+      ],
+      "diarrhea": [
+        {"name": "Loperamide", "dosage": "2mg after each loose stool", "suggestion": "Do not exceed 8mg per day."},
+        {"name": "Oral Rehydration Solution", "dosage": "As needed", "suggestion": "Take small sips to stay hydrated."}
+      ],
+      "vomiting": [
+        {"name": "Ondansetron", "dosage": "4mg every 8 hours", "suggestion": "Dissolve under the tongue for quick effect."},
+        {"name": "Domperidone", "dosage": "10mg three times daily", "suggestion": "Take 30 minutes before meals."}
+      ],
+      "sore_throat": [
+        {"name": "Lozenges", "dosage": "One every 2-3 hours", "suggestion": "Do not chew, let it dissolve slowly."},
+        {"name": "Saltwater Gargle", "dosage": "Twice daily", "suggestion": "Use warm water for best results."}
+      ],
+      "high_blood_pressure": [
+        {"name": "Amlodipine", "dosage": "5mg once daily", "suggestion": "Monitor blood pressure regularly."},
+        {"name": "Lisinopril", "dosage": "10mg once daily", "suggestion": "Avoid excessive salt intake."}
+      ],
+      "asthma": [
+        {"name": "Salbutamol Inhaler", "dosage": "2 puffs every 4-6 hours as needed", "suggestion": "Shake well before use."},
+        {"name": "Montelukast", "dosage": "10mg once daily", "suggestion": "Take in the evening for best effect."}
+      ],
+      "back_pain": [
+        {"name": "Ibuprofen", "dosage": "400mg every 6-8 hours", "suggestion": "Take with food to avoid stomach upset."},
+        {"name": "Diclofenac Gel", "dosage": "Apply twice daily", "suggestion": "Massage gently into the affected area."}
+      ],
+      "heartburn": [
+        {"name": "Antacids", "dosage": "Chew 1 tablet as needed", "suggestion": "Avoid spicy and fatty foods."},
+        {"name": "Esomeprazole", "dosage": "20mg once daily", "suggestion": "Take before breakfast."}
+      ],
+      "acne": [
+        {"name": "Benzoyl Peroxide", "dosage": "Apply once daily", "suggestion": "Avoid sun exposure."},
+        {"name": "Clindamycin Gel", "dosage": "Apply twice daily", "suggestion": "Wash face before application."}
+      ],
+      "insomnia": [
+        {"name": "Melatonin", "dosage": "3mg before bedtime", "suggestion": "Avoid screens before sleeping."},
+        {"name": "Diphenhydramine", "dosage": "25mg before bedtime", "suggestion": "Do not drive after taking."}
+      ]
+    }
+  }
+  
