@@ -1,4 +1,3 @@
-# Handwritten Text Extraction and Medical Recommendation System
 # 🩺 Handwritten Text Extraction and Medical Recommendation System
 
 > 🧠 Extracts handwritten medical prescriptions and provides personalized medicine recommendations.
