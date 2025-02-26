@@ -13,6 +13,39 @@
 
 This project extracts text from handwritten medical prescriptions using image processing and OCR techniques. After extracting the text, it analyzes symptoms or conditions and provides medicine recommendations and care suggestions through an interactive web interface.
 
+## ✨ Key Features
+
+- 📷 **Smart Image Processing**
+  - Advanced preprocessing
+  - Multiple format support
+  - Prescription detection
+
+- 🔍 **Intelligent Text Extraction**
+  - OCR processing
+  - Text cleanup
+  - Medical term recognition
+
+- 🤖 **Smart Recommendation System**
+  - Medicine suggestions
+  - Symptom analysis
+  - Safety warnings
+
+- 🎯 **User-Friendly Interface**
+  - Modern web design
+  - Real-time feedback
+  - Clear results
+
+## 💫 How It Works
+
+```mermaid
+graph LR
+    A[Upload Prescription] --> B[Image Processing]
+    B --> C[Text Extraction]
+    C --> D[Analysis Engine]
+    D --> E[Medicine Recommendations]
+    E --> F[Display Results]
+```
+
 ## 🛠️ Environment Setup
 
 ### 🔧 Prerequisites
@@ -105,13 +138,10 @@ python app.py
 2. **Process:** The image is processed, text is extracted, and analyzed.
 3. **Output:** Medicines and care suggestions are printed.
 
+
 ## 🔧 Troubleshooting
 
 - **Text not extracted:** Check the image quality and Tesseract installation.
 - **Incorrect recommendations:** Verify the `MEDICINE_DB` in the recommendation engine.
 - **OCR errors:** Ensure proper image preprocessing and Tesseract version.
 - **Server issues:** Check Flask installation and port availability.
-
----
-
-📝 Note: Always consult healthcare professionals before following any medical recommendations.
